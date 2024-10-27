@@ -1,0 +1,102 @@
+[
+    {
+      "id": 1,
+      "name": "Shakib Al Hasan",
+      "country": "Bangladesh",
+      "image": "https://i.ibb.co.com/sbc0Rn8/shakib-looks-on-01-03-2022.jpg",
+      "role": "All-rounder",
+      "battingType": "Left-handed",
+      "bowlingType": "Left-arm orthodox",
+      "biddingPrice": "2000000 USD"
+    },
+    {
+      "id": 2,
+      "name": "Tamim Iqbal",
+      "country": "Bangladesh",
+      "image": "https://i.ibb.co.com/WkTy2Jn/tamim-iqbal-odi-squad-16-02-2023.jpg",
+      "role": "Batsman",
+      "battingType": "Left-handed",
+      "bowlingType": "Right-arm offbreak",
+      "biddingPrice": "1500000 USD"
+    },
+    {
+      "id": 3,
+      "name": "Mustafizur Rahman",
+      "country": "Bangladesh",
+      "image": "https://i.ibb.co.com/TgGR46D/mustafijur-rahman.webp",
+      "role": "Bowler",
+      "battingType": "Right-handed",
+      "bowlingType": "Left-arm fast-medium",
+      "biddingPrice": "1200000 USD"
+    },
+    {
+      "id": 4,
+      "name": "Mahmudullah Riyad",
+      "country": "Bangladesh",
+      "image": "https://i.ibb.co.com/hDnRM5w/mahmudullah-131448747-16x9-0.webp",
+      "role": "All-rounder",
+      "battingType": "Right-handed",
+      "bowlingType": "Right-arm offbreak",
+      "biddingPrice": "800000 USD"
+    },
+    {
+      "id": 5,
+      "name": "Litton Das",
+      "country": "Bangladesh",
+      "image": "https://i.ibb.co.com/TqtZwgf/player-Liton.webp",
+      "role": "Batsman",
+      "battingType": "Right-handed",
+      "bowlingType": "Right-arm offbreak",
+      "biddingPrice": "700000 USD"
+    },
+    {
+      "id": 6,
+      "name": "Mehidy Hasan Miraz",
+      "country": "Bangladesh",
+      "image": "https://i.ibb.co.com/VJDKycp/mehedi-miraz.jpg",
+      "role": "All-rounder",
+      "battingType": "Right-handed",
+      "bowlingType": "Right-arm offbreak",
+      "biddingPrice": "600000 USD"
+    },
+    {
+      "id": 7,
+      "name": "Mushfiqur Rahim",
+      "country": "Bangladesh",
+      "image": "https://i.ibb.co.com/ftbMyjr/Musfikur-rohim.jpg",
+      "role": "Batsman",
+      "battingType": "Right-handed",
+      "bowlingType": "Right-arm offbreak",
+      "biddingPrice": "500000 USD"
+    },
+    {
+      "id": 8,
+      "name": "Nasum Ahmed",
+      "country": "Bangladesh",
+      "image": "https://i.ibb.co.com/tbDjtFd/Nasum-Ahmed-on-2022.png",
+      "role": "Bowler",
+      "battingType": "Left-handed",
+      "bowlingType": "Left-arm orthodox",
+      "biddingPrice": "400000 USD"
+    },
+    {
+      "id": 9,
+      "name": "Taijul Islam",
+      "country": "Bangladesh",
+      "image": "https://i.ibb.co.com/JdJ9ZBr/Taijul-Islam-t.png",
+      "role": "Bowler",
+      "battingType": "Left-handed",
+      "bowlingType": "Left-arm orthodox",
+      "biddingPrice": "300000 USD"
+    },
+    {
+      "id": 10,
+      "name": "Taskin Ahmed",
+      "country": "Bangladesh",
+      "image": "https://i.ibb.co.com/ZHZ85fg/Taskin-Ahmed-3.webp",
+      "role": "Bowler",
+      "battingType": "Right-handed",
+      "bowlingType": "Right-arm fast",
+      "biddingPrice": "200000 USD"
+    }
+  ]
