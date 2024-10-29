@@ -1,19 +1,23 @@
 const Bannar = ({handleCredit}) => {
-
     return (
         <div>
-            <div className="grid">
-                <div className="flex justify-center gap-4">
-                <img src="/src/assets/banner.png" alt="" />
-                </div>
-                <div>
-                <h1 className="text-center text-4xl font-extrabold">Assemble Your Ultimate Dream 11 Cricket Team</h1>
-                <p className="text-center">Beyond Boundaries Beyond Limits</p>
-                <div className="flex justify-center">
-                <button onClick={()=>handleCredit(600000)} className="btn">Clim free Cradit</button>
-                </div>
-                </div>
-            </div>
+            <div
+  className="hero min-h-screen"
+  style={{
+    backgroundImage: "url(https://img.daisyui.com/images/stock/photo-1507358522600-9f71e620c44e.webp)",
+  }}>
+  <div className="hero-overlay bg-opacity-60"></div>
+  <div className="hero-content text-neutral-content text-center">
+    <div className="max-w-md">
+      <h1 className="mb-5 text-5xl font-bold">Hello there</h1>
+      <p className="mb-5">
+        Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda excepturi exercitationem
+        quasi. In deleniti eaque aut repudiandae et a id nisi.
+      </p>
+      <button onClick={()=>handleCredit(6000000)} className="btn btn-primary">Get Started</button>
+    </div>
+  </div>
+</div>
         </div>
     );
 };

@@ -1,47 +1,53 @@
-import { useEffect, useState } from "react";
-import Header from "./Components/Header";
-import Bannar from "./Components/Bannar";
-import Available from "./Components/Available";
-import Selectedplayer from "./Components/Selectedplayer";
-
+import { useEffect, useState } from 'react';
+import Bannar from './Components/Bannar';
+import Header from './Components/Header';
+import Available from './Components/Available';
+import Selectedplayer from './Components/Selectedplayer';
 const App = () => {
-  const [selectedPlayers, setSelectedPlayers]=useState([]);
-  const handleSelectedPlayers=(data)=>{
-    setSelectedPlayers([...selectedPlayers,data]);
+  // credit
+  const [credit, setCredit]=useState(0);
+  const handleCredit=(a)=>{
+    setCredit(a+credit);
+  }
+  // Togle
+  const [togle, setTogle]=useState(true);
+  const handleTogle=(status)=>{
+    setTogle(status)
   }
 
-  const [credit, setCridit]=useState(0);
-  const handleCredit=(amount)=>{
-  setCridit(credit+amount);
-}
-const [isActive, setisActive]=useState(true);
-const handleActive=(status)=>{
-if(status){
-  setisActive(true)
-}
-else{setisActive(false)}
-}
+  // data load
+  const [playerCards, setPlayerCards]=useState([]);
+  useEffect(()=>{
+    fetch('data.json')
+    .then(res=>res.json())
+    .then(data=>setPlayerCards(data))
+  },[])
 
-const [cards,setCards]=useState([])
-useEffect(()=>{
-  fetch('data.json')
-  .then(res=>res.json())
-  .then(data=>setCards(data))
-},[])
+  const [selectP, setSelectP]=useState([]);
+  const handleChoose=(p)=>{
+    setSelectP([...selectP,p])
+    const chooseP=playerCards.filter(pd=>pd.id!==p.id);
+    setPlayerCards(chooseP)
+
+  }
+  const handleDelete=(id)=>{
+    const deleteItem=selectP.find(p=>p.id===id);
+    playerCards.unshift(deleteItem);
+    const updateP=selectP.filter(p=>p.id!==id);
+    setSelectP((updateP))
+  }
 
   return (
     <div>
-      <div>
-      <Header credit={credit}/>
-      <Bannar handleCredit={handleCredit}/>
-    </div>
-    <div className="flex justify-center gap-6">
-      <button onClick={()=>handleActive(true)} className="btn">Available</button>
-      <button onClick={()=>handleActive(false)} className="btn">Selected( {selectedPlayers.length} )</button>
-         </div>
-         {
-        isActive?<Available handleSelectedPlayers={handleSelectedPlayers} cards={cards}/>:<Selectedplayer selectedPlayers={selectedPlayers}/>
-      }
+        <Header updateCredit={credit}/>
+        <Bannar handleCredit={handleCredit}/>
+        <div className='flex justify-center gap-8'>
+        <button onClick={()=>handleTogle(true)} className='btn'>Available Player</button>
+        <button onClick={()=>handleTogle(false)} className='btn'>Selected Player {selectP.length}</button>
+        </div>
+        {
+          togle?<Available handleChoose={handleChoose} playersDetails={playerCards}/>:<Selectedplayer handleDelete={handleDelete} selectP={selectP}/>
+        }
     </div>
   );
 };

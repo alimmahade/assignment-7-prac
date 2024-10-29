@@ -1,9 +1,17 @@
-const Selectedplayer = ({selectedPlayers}) => {
-
+const Selectedplayer = ({selectP, handleDelete}) => {
+ 
     return (
         <div>
-            <h1>Selected Players</h1>
-            <h1>{selectedPlayers.map(p=><p key={p.id}>{p.name}</p>)}</h1>
+    {
+        selectP.map(p=><footer key={p.id} className="footer footer-title bg-base-300 text-base-content p-4 border shadow-md rounded-md">
+            <div className="flex">
+                <p>Name: {p.name}</p>
+                <p>Role: {p.role}</p>
+                <p>Country: {p.country}</p>
+                <button onClick={()=>handleDelete(p.id)}>Delete</button>
+            </div>
+        </footer>)
+    }
         </div>
     );
 };
